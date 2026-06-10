@@ -10,49 +10,70 @@
 
   <body class="bg-gray-100">
     <!-- Navigation -->
+<nav class="w-full border-b border-gray-200 bg-white shadow-sm">
+  
+  <div class="flex items-center justify-between px-6 py-4">
+    
+    <!-- Logo -->
+    <h1 class="text-xl font-bold text-blue-500">SocialApp</h1>
 
-    <nav class="w-full border-b border-gray-200 bg-white shadow-sm">
-      <div
-        style="
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 16px 32px;
-        "
-      >
-        <!-- Logo gauche -->
-        <h1 class="text-xl font-bold text-blue-500">SocialApp</h1>
+    <!-- Search desktop -->
+    <input
+      type="search"
+      placeholder="Search posts..."
+      class="hidden hidden w-96  rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none md:block"
+    />
 
-       <input
-  type="search"
-  placeholder="Search posts..."
-  class="w-80 rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-/>
+    <!-- Links desktop -->
+    <ul class="hidden items-center gap-6 md:flex">
+      <li>
+        <a href="../feed/index.html" class="text-gray-600 hover:text-blue-500">Feed</a>
+      </li>
+      <li>
+        <a href="../profile/index.html" class="text-gray-600 hover:text-blue-500">Profile</a>
+      </li>
+      <li>
+        <a href="../index.html" class="text-gray-600 hover:text-blue-500">Logout</a>
+      </li>
+    </ul>
 
-<ul class="flex items-center gap-6">
-  <li>
-    <a href="../feed/index.html" class="font-bold text-blue-500">
-      Feed
-    </a>
-  </li>
+    <!-- Burger mobile -->
+    <button
+      id="menu-btn"
+      class="rounded-lg p-2 hover:bg-gray-100 md:hidden"
+      onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+    >
+      <svg class="h-6 w-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
 
- <li>
-  <a
-    href="../profile/index.html"
-    class="text-gray-600 hover:text-blue-500"
-  >
-    Profile
-  </a>
-</li>
+  </div>
 
-  <li>
-    <a href="../index.html" class="text-gray-600 hover:text-blue-500">
-      Logout
-    </a>
-  </li>
-</ul>
-      </div>
-    </nav>
+  <!-- Menu mobile -->
+  <div id="mobile-menu" class="hidden border-t border-gray-200 bg-white px-6 py-4 md:hidden">
+    
+    <input
+      type="search"
+      placeholder="Search posts..."
+      class="mb-4 w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+    />
+
+    <ul class="flex flex-col gap-4">
+      <li>
+        <a href="../feed/index.html" class="font-bold text-blue-500">Feed</a>
+      </li>
+      <li>
+        <a href="../profile/index.html" class="text-gray-600 hover:text-blue-500">Profile</a>
+      </li>
+      <li>
+        <a href="../index.html" class="text-gray-600 hover:text-blue-500">Logout</a>
+      </li>
+    </ul>
+
+  </div>
+
+</nav>
 
         <!-- Feed container -->
 
