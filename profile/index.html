@@ -4,206 +4,149 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
-
-    <title>FrameWork Social Media</title>
+    <title>Framework Social Media - Profile</title>
   </head>
 
   <body class="bg-gray-100">
-    <!-- Navigation -->
 
+    <!-- Navigation -->
     <nav class="w-full border-b border-gray-200 bg-white shadow-sm">
-      <div
-        style="
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 16px 32px;
-        "
-      >
-        <!-- Logo gauche -->
+      <div class="flex items-center justify-between px-6 py-4">
+
         <h1 class="text-xl font-bold text-blue-500">SocialApp</h1>
 
-            <!-- Search desktop -->
-    <input
-      type="search"
-      placeholder="Search posts..."
-      class="hidden hidden w-96  rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none md:block"
-    />
+        <input
+          type="search"
+          placeholder="Search posts..."
+          class="hidden w-96 rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none md:block"
+        />
 
-    <!-- Links desktop -->
-    <ul class="hidden items-center gap-6 md:flex">
-      <li>
-        <a href="../feed/index.html" class="text-gray-600 hover:text-blue-500">Feed</a>
-      </li>
-      <li>
-        <a href="../profile/index.html" class="text-gray-600 hover:text-blue-500">Profile</a>
-      </li>
-      <li>
-        <a href="../index.html" class="text-gray-600 hover:text-blue-500">Logout</a>
-      </li>
-    </ul>
-
-    <!-- Burger mobile -->
-    <button
-      id="menu-btn"
-      class="rounded-lg p-2 hover:bg-gray-100 md:hidden"
-      onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
-    >
-      <svg class="h-6 w-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
-
-  </div>
-
-  <!-- Menu mobile -->
-  <div id="mobile-menu" class="hidden border-t border-gray-200 bg-white px-6 py-4 md:hidden">
-    
-    <input
-      type="search"
-      placeholder="Search posts..."
-      class="mb-4 w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-    />
-
-        <!-- Links droite -->
-        <ul class="flex gap-6">
+        <ul class="hidden items-center gap-6 md:flex">
           <li>
-            <a
-              href="../feed/index.html"
-              class="text-gray-600 hover:text-blue-500"
-              >Feed</a
-            >
+            <a href="../feed/index.html" class="text-gray-600 hover:text-blue-500">Feed</a>
           </li>
-           <img
-      src="../img/profile-picture.jpg"
-      alt="Profile"
-      class="h-8 w-8 rounded-full object-cover"
-    />
-    
-  </a>
-</li>
           <li>
-            <a href="../index.html" class="text-gray-600 hover:text-blue-500"
-              >Logout</a
-            >
+            <a href="index.html" class="font-bold text-blue-500">Profile</a>
+          </li>
+          <li>
+            <a href="../index.html" class="text-gray-600 hover:text-blue-500">Logout</a>
+          </li>
+        </ul>
+
+        <button
+          id="menu-btn"
+          class="rounded-lg p-2 hover:bg-gray-100 md:hidden"
+          onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+        >
+          <svg class="h-6 w-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+      </div>
+
+      <!-- Menu mobile -->
+      <div id="mobile-menu" class="hidden border-t border-gray-200 bg-white px-6 py-4 md:hidden">
+        <input
+          type="search"
+          placeholder="Search posts..."
+          class="mb-4 w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        />
+        <ul class="flex flex-col gap-4">
+          <li>
+            <a href="../feed/index.html" class="text-gray-600 hover:text-blue-500">Feed</a>
+          </li>
+          <li>
+            <a href="index.html" class="font-bold text-blue-500">Profile</a>
+          </li>
+          <li>
+            <a href="../index.html" class="text-gray-600 hover:text-blue-500">Logout</a>
           </li>
         </ul>
       </div>
     </nav>
 
- 
+    <!-- Main content -->
+    <main class="mx-auto max-w-6xl px-4 py-10">
 
-<!-- Main content -->
-    <main class="mx-auto max-w-6xl px-15 py-10">
+      <!-- Cover image -->
+      <section class="relative mb-6 h-48 overflow-hidden rounded-xl shadow-md">
+        <img
+          src="../img/kimson.jpg"
+          alt="Cover image"
+          class="h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="absolute bottom-6 left-6 text-white">
+          <h1 class="text-3xl font-bold">Bonnie Green</h1>
+          <p class="text-sm">Visual Designer & Creative Thinker</p>
+        </div>
+      </section>
 
-          <!-- COVER IMAGE -->
-  <section class="relative mb-2 h-48 overflow-hidden rounded-xl shadow-md">
-  <img
-    src="../img/kimson.jpg"
-    alt="Cover image"
-    class="h-full w-full object-cover"
-  />
+      <div class="flex flex-col items-center py-6">
 
-  <div class="absolute inset-0 bg-black/30"></div>
+        <!-- Profile Card -->
+        <div class="relative w-full max-w-sm rounded-xl border border-gray-200 bg-white p-6 shadow-md">
+          <button class="absolute top-3 right-3 rounded-lg p-2 hover:bg-gray-100">⋮</button>
+          <div class="flex flex-col items-center">
+            <img
+              class="mb-4 h-24 w-24 rounded-full object-cover"
+              src="../img/profile-picture.jpg"
+              alt="Profile image"
+            />
+            <h2 class="text-xl font-semibold text-gray-900">Bonnie Green</h2>
+            <p class="mb-4 text-gray-500">Visual Designer</p>
+            <p class="mb-6 text-center text-sm text-gray-600">
+              Open-source contributor and creative designer passionate about building engaging digital experiences.
+            </p>
 
-  <div class="absolute bottom-6 left-6 text-white">
-    <h1 class="text-3xl font-bold">Bonnie Green</h1>
-    <p class="text-sm">Visual Designer & Creative Thinker</p>
-  </div>
-</section>
-
-    <div class="flex min-h-screen flex-col items-center justify-center py-10">
-
-      <!-- Profile Card -->
-      <div
-        class="relative w-full max-w-sm rounded-xl border border-gray-200 bg-white p-6 shadow-md"
-      >
-        <!-- Menu Button -->
-        <button class="absolute top-3 right-3 rounded-lg p-2 hover:bg-gray-100">
-          ⋮
-        </button>
-
-        <!-- Profile Content -->
-        <div class="flex flex-col items-center">
-          <img
-            class="mb-4 h-24 w-24 rounded-full object-cover"
-            src="../img/profile-picture.jpg"
-            alt="Profile image"
-          />
-
-          <h2 class="text-xl font-semibold text-gray-900">Bonnie Green</h2>
-
-          <p class="mb-4 text-gray-500">Visual Designer</p>
-
-          <p class="mb-6 text-center text-sm text-gray-600">
-            Open-source contributor and creative designer passionate about
-            building engaging digital experiences.
-          </p>
-
-          <!-- Stats -->
-          <div class="mb-6 flex gap-8 text-sm">
-            <div class="text-center">
-              <p class="font-bold text-gray-900">758</p>
-              <p class="text-gray-500">Followers</p>
+            <!-- Stats -->
+            <div class="mb-6 flex gap-8 text-sm">
+              <div class="text-center">
+                <p class="font-bold text-gray-900">758</p>
+                <p class="text-gray-500">Followers</p>
+              </div>
+              <div class="text-center">
+                <p class="font-bold text-gray-900">120</p>
+                <p class="text-gray-500">Following</p>
+              </div>
+              <div class="text-center">
+                <p class="font-bold text-gray-900">34</p>
+                <p class="text-gray-500">Posts</p>
+              </div>
             </div>
 
-            <div class="text-center">
-              <p class="font-bold text-gray-900">120</p>
-              <p class="text-gray-500">Following</p>
-            </div>
-
-            <div class="text-center">
-              <p class="font-bold text-gray-900">34</p>
-              <p class="text-gray-500">Posts</p>
+            <!-- Buttons -->
+            <div class="flex gap-3">
+              <button class="rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
+                Follow
+              </button>
+              <button class="rounded-lg border border-gray-300 px-4 py-2 hover:bg-gray-100">
+                Message
+              </button>
             </div>
           </div>
+        </div>
 
-          <!-- Buttons -->
-          <div class="flex gap-3">
-            <button
-              class="rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
-            >
-              Follow
-            </button>
-
-            <button
-              class="rounded-lg border border-gray-300 px-4 py-2 hover:bg-gray-100"
-            >
-              Message
-            </button>
+        <!-- Recent Posts -->
+        <div class="mt-6 w-full max-w-sm">
+          <h3 class="mb-4 text-xl font-semibold text-gray-900">Recent Posts</h3>
+          <div class="mb-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+            <p class="font-medium">My first social media post</p>
+            <p class="mt-2 text-sm text-gray-600">Excited to join this new platform!</p>
+          </div>
+          <div class="mb-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+            <p class="font-medium">Learning Tailwind CSS</p>
+            <p class="mt-2 text-sm text-gray-600">Building responsive interfaces is becoming much easier.</p>
+          </div>
+          <div class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+            <p class="font-medium">Working on my portfolio</p>
+            <p class="mt-2 text-sm text-gray-600">Combining UX Design and Front-End Development.</p>
           </div>
         </div>
+
       </div>
+    </main>
 
-      <!-- User Posts -->
-<div class="mt-6 w-full max-w-ld">       
-   <h3 class="mb-4 text-xl font-semibold text-gray-900">Recent Posts</h3>
-
-        <div
-          class="mb-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm"
-        >
-          <p class="font-medium">My first social media post</p>
-          <p class="mt-2 text-sm text-gray-600">
-            Excited to join this new platform!
-          </p>
-        </div>
-
-        <div
-          class="mb-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm"
-        >
-          <p class="font-medium">Learning Tailwind CSS</p>
-          <p class="mt-2 text-sm text-gray-600">
-            Building responsive interfaces is becoming much easier.
-          </p>
-        </div>
-
-        <div class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
-          <p class="font-medium">Working on my portfolio</p>
-          <p class="mt-2 text-sm text-gray-600">
-            Combining UX Design and Front-End Development.
-          </p>
-        </div>
-      </div>
-    </div>
   </body>
 </html>
