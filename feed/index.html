@@ -8,10 +8,16 @@
   </head>
 
   <body class="bg-gray-100">
-
     <!-- Navigation -->
- <nav class="w-full border-b border-gray-200 bg-white shadow-sm">
-      <div style="display:flex; justify-content:space-between; align-items:center; padding:16px 32px;">
+    <nav class="w-full border-b border-gray-200 bg-white shadow-sm">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16px 32px;
+        "
+      >
         <h1 class="text-xl font-bold text-blue-500">SocialApp</h1>
 
         <input
@@ -20,22 +26,25 @@
           class="hidden w-96 rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none md:block"
         />
 
-<ul
-  class="items-center gap-6"
-  style="display:flex"
->
+        <ul class="hidden items-center gap-6 md:flex">
           <li>
             <a href="index.html" class="font-bold text-blue-500">Feed</a>
           </li>
           <li>
-            <a href="../profile/index.html" class="text-gray-600 hover:text-blue-500">Profile</a>
+            <a
+              href="../profile/index.html"
+              class="text-gray-600 hover:text-blue-500"
+              >Profile</a
+            >
           </li>
           <li>
-            <a href="../index.html" class="text-gray-600 hover:text-blue-500">Logout</a>
+            <a href="../index.html" class="text-gray-600 hover:text-blue-500"
+              >Logout</a
+            >
           </li>
         </ul>
 
-         <button
+        <button
           id="menu-btn"
           class="rounded-lg p-2 hover:bg-gray-100 md:hidden"
           onclick="
@@ -92,78 +101,136 @@
 
     <!-- Main content -->
     <main class="mx-auto max-w-6xl px-4 py-10">
-
       <!-- Hero section -->
       <section
         class="mb-8 flex h-64 items-center rounded-xl bg-cover bg-center p-8 text-white shadow-md"
-        style="background-image: url('../img/priscilla.jpg');"
+        style="background-image: url(&quot;../img/priscilla.jpg&quot;)"
       >
         <div>
           <h1 class="mb-2 text-4xl font-bold">Welcome back, Bonnie 👋</h1>
-          <p class="text-lg">Discover new posts and connect with your community.</p>
+          <p class="text-lg">
+            Discover new posts and connect with your community.
+          </p>
         </div>
       </section>
 
       <!-- Sort options -->
-      <select class="mb-6 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+      <select
+        class="mb-6 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+      >
         <option>Latest</option>
         <option>Oldest</option>
         <option>Most popular</option>
       </select>
 
       <!-- Create post form -->
-      <div class="mb-8 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+      <div
+        class="mb-8 rounded-lg border border-gray-200 bg-white p-4 shadow-sm"
+      >
         <textarea
           placeholder="What's on your mind?"
           class="mb-3 w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
           rows="3"
         ></textarea>
-        <button class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">
+        <button
+          class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+        >
           Post
         </button>
       </div>
 
       <!-- Posts feed -->
       <ol class="relative border-s border-gray-200">
-
-        <li class="mb-10 ms-6">
-          <span class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full ring-8 ring-white">
-            <img class="rounded-full shadow-lg" src="../img/profile-picture.jpg" alt="Bonnie image"/>
+        <li class="ms-6 mb-10">
+          <span
+            class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full ring-8 ring-white"
+          >
+            <img
+              class="rounded-full shadow-lg"
+              src="../img/profile-picture.jpg"
+              alt="Bonnie image"
+            />
           </span>
-          <div class="items-center justify-between rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:flex">
-            <time class="mb-1 rounded border border-blue-200 bg-blue-50 px-1.5 py-0.5 text-xs font-medium text-blue-700 sm:order-last sm:mb-0">just now</time>
+          <div
+            class="items-center justify-between rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:flex"
+          >
+            <time
+              class="mb-1 rounded border border-blue-200 bg-blue-50 px-1.5 py-0.5 text-xs font-medium text-blue-700 sm:order-last sm:mb-0"
+              >just now</time
+            >
             <div class="text-gray-600">
-              <a href="#" class="font-medium text-gray-900 hover:underline">Bonnie Green</a>
+              <a href="#" class="font-medium text-gray-900 hover:underline"
+                >Bonnie Green</a
+              >
               moved
-              <a href="#" class="font-medium text-gray-900 hover:underline">Jese Leos</a>
+              <a href="#" class="font-medium text-gray-900 hover:underline"
+                >Jese Leos</a
+              >
               to
-              <span class="rounded border border-gray-300 bg-gray-100 px-1.5 py-0.5 text-xs font-medium text-gray-900">Funny Group</span>
+              <span
+                class="rounded border border-gray-300 bg-gray-100 px-1.5 py-0.5 text-xs font-medium text-gray-900"
+                >Funny Group</span
+              >
             </div>
           </div>
         </li>
 
-        <li class="mb-10 ms-6">
-          <span class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full ring-8 ring-white">
-            <img class="rounded-full shadow-lg" src="../img/profile-picture.jpg" alt="Thomas Lean image"/>
+        <li class="ms-6 mb-10">
+          <span
+            class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full ring-8 ring-white"
+          >
+            <img
+              class="rounded-full shadow-lg"
+              src="../img/profile-picture.jpg"
+              alt="Thomas Lean image"
+            />
           </span>
           <div class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
             <div class="mb-3 items-center justify-between sm:flex">
-              <time class="mb-1 rounded border border-blue-200 bg-blue-50 px-1.5 py-0.5 text-xs font-medium text-blue-700 sm:order-last sm:mb-0">2 hours ago</time>
+              <time
+                class="mb-1 rounded border border-blue-200 bg-blue-50 px-1.5 py-0.5 text-xs font-medium text-blue-700 sm:order-last sm:mb-0"
+                >2 hours ago</time
+              >
               <div class="text-gray-600">
                 Thomas Lean commented on
-                <a href="#" class="font-medium text-gray-900 hover:underline">Flowbite Pro</a>
+                <a href="#" class="font-medium text-gray-900 hover:underline"
+                  >Flowbite Pro</a
+                >
               </div>
             </div>
-            <div class="rounded-lg border border-gray-300 bg-gray-100 p-3 text-xs font-normal italic text-gray-600">
-              Hi ya'll! I wanted to share a webinar zeroheight is having regarding how to best measure your design system!
+            <div
+              class="rounded-lg border border-gray-300 bg-gray-100 p-3 text-xs font-normal text-gray-600 italic"
+            >
+              Hi ya'll! I wanted to share a webinar zeroheight is having
+              regarding how to best measure your design system!
             </div>
             <div class="mt-4 flex items-center space-x-3">
-              <button type="button" class="rounded-lg border border-gray-300 bg-gray-100 px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-200 hover:text-gray-900 focus:ring-4 focus:ring-gray-200 focus:outline-none">
+              <button
+                type="button"
+                class="rounded-lg border border-gray-300 bg-gray-100 px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-200 hover:text-gray-900 focus:ring-4 focus:ring-gray-200 focus:outline-none"
+              >
                 View comment
               </button>
-              <button type="button" class="inline-flex items-center rounded-lg border border-transparent bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none">
-                <svg class="-ms-0.5 me-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.5 8.046H11V6.119c0-.921-.9-1.446-1.524-.894l-5.108 4.49a1.2 1.2 0 0 0 0 1.739l5.108 4.49c.624.556 1.524.027 1.524-.893v-1.928h2a3.023 3.023 0 0 1 3 3.046V19a5.593 5.593 0 0 0-1.5-10.954Z"/>
+              <button
+                type="button"
+                class="inline-flex items-center rounded-lg border border-transparent bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none"
+              >
+                <svg
+                  class="-ms-0.5 me-1.5 h-4 w-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14.5 8.046H11V6.119c0-.921-.9-1.446-1.524-.894l-5.108 4.49a1.2 1.2 0 0 0 0 1.739l5.108 4.49c.624.556 1.524.027 1.524-.893v-1.928h2a3.023 3.023 0 0 1 3 3.046V19a5.593 5.593 0 0 0-1.5-10.954Z"
+                  />
                 </svg>
                 Reply
               </button>
@@ -172,23 +239,39 @@
         </li>
 
         <li class="ms-6">
-          <span class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full ring-8 ring-white">
-            <img class="rounded-full shadow-lg" src="../img/profile-picture.jpg" alt="Jese Leos image"/>
+          <span
+            class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full ring-8 ring-white"
+          >
+            <img
+              class="rounded-full shadow-lg"
+              src="../img/profile-picture.jpg"
+              alt="Jese Leos image"
+            />
           </span>
-          <div class="items-center justify-between rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:flex">
-            <time class="mb-1 rounded border border-blue-200 bg-blue-50 px-1.5 py-0.5 text-xs font-medium text-blue-700 sm:order-last sm:mb-0">3 hours ago</time>
+          <div
+            class="items-center justify-between rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:flex"
+          >
+            <time
+              class="mb-1 rounded border border-blue-200 bg-blue-50 px-1.5 py-0.5 text-xs font-medium text-blue-700 sm:order-last sm:mb-0"
+              >3 hours ago</time
+            >
             <div class="text-gray-600">
-              <a href="#" class="font-medium text-gray-900 hover:underline">Bonnie Green</a>
+              <a href="#" class="font-medium text-gray-900 hover:underline"
+                >Bonnie Green</a
+              >
               moved
-              <a href="#" class="font-medium text-gray-900 hover:underline">Jese Leos</a>
+              <a href="#" class="font-medium text-gray-900 hover:underline"
+                >Jese Leos</a
+              >
               to
-              <span class="rounded border border-gray-300 bg-gray-100 px-1.5 py-0.5 text-xs font-medium text-gray-900">Funny Group</span>
+              <span
+                class="rounded border border-gray-300 bg-gray-100 px-1.5 py-0.5 text-xs font-medium text-gray-900"
+                >Funny Group</span
+              >
             </div>
           </div>
         </li>
-
       </ol>
     </main>
-
   </body>
 </html>

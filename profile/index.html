@@ -21,7 +21,7 @@
           class="hidden w-96 rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none md:block"
         />
 
-        <ul style="display:flex; gap:24px; list-style:none; margin:0; padding:0;">
+        <ul class="hidden items-center gap-6 md:flex">
           <li><a href="../feed/index.html" class="text-gray-600 hover:text-blue-500">Feed</a></li>
           <li><a href="index.html" class="font-bold text-blue-500">Profile</a></li>
           <li><a href="../index.html" class="text-gray-600 hover:text-blue-500">Logout</a></li>
@@ -50,22 +50,19 @@
     />
 
         <!-- Links droite -->
-        <ul class="flex gap-6">
+  <ul class="flex flex-col gap-4">
           <li>
-            <a
-              href="../feed/index.html"
-              class="text-gray-600 hover:text-blue-500"
+            <a href="../feed/index.html" class="text-gray-600 hover:text-blue-500"
               >Feed</a
             >
           </li>
-           <img
-      src="../img/profile-picture.jpg"
-      alt="Profile"
-      class="h-8 w-8 rounded-full object-cover"
-    />
-    
-  </a>
-</li>
+          <li>
+            <a
+              href="../profile/index.html"
+               class="font-bold text-blue-500"
+              >Profile</a
+            >
+          </li>
           <li>
             <a href="../index.html" class="text-gray-600 hover:text-blue-500"
               >Logout</a
