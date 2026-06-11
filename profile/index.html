@@ -21,7 +21,10 @@
           class="hidden w-96 rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none md:block"
         />
 
-        <ul class="hidden items-center gap-6 md:flex">
+        <ul
+          class="hidden items-center gap-6 md:flex"
+          style="display:none"
+        >
           <li>
             <a href="../feed/index.html" class="text-gray-600 hover:text-blue-500">Feed</a>
           </li>
@@ -36,7 +39,7 @@
         <button
           id="menu-btn"
           class="rounded-lg p-2 hover:bg-gray-100 md:hidden"
-          onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+          onclick="document.getElementById('mobile-menu').classList.toggle('hidden'); document.getElementById('mobile-menu').style.display = document.getElementById('mobile-menu').style.display === 'none' ? 'block' : 'none';"
         >
           <svg class="h-6 w-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -46,7 +49,11 @@
       </div>
 
       <!-- Menu mobile -->
-      <div id="mobile-menu" class="hidden border-t border-gray-200 bg-white px-6 py-4 md:hidden">
+      <div
+        id="mobile-menu"
+        class="hidden border-t border-gray-200 bg-white px-6 py-4 md:hidden"
+        style="display:none"
+      >
         <input
           type="search"
           placeholder="Search posts..."
