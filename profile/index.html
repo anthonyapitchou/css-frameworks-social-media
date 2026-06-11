@@ -11,8 +11,13 @@
 
     <!-- Navigation -->
     <nav class="w-full border-b border-gray-200 bg-white shadow-sm">
-      <div class="flex items-center justify-between px-6 py-4">
-
+   <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16px 32px ">
+     
         <h1 class="text-xl font-bold text-blue-500">SocialApp</h1>
 
         <input
@@ -35,15 +40,15 @@
           </li>
         </ul>
 
-        <button
-          id="menu-btn"
-          class="rounded-lg p-2 hover:bg-gray-100 md:hidden"
-          onclick="document.getElementById('mobile-menu').classList.toggle('hidden'); document.getElementById('mobile-menu').style.display = document.getElementById('mobile-menu').style.display === 'none' ? 'block' : 'none';"
-        >
-          <svg class="h-6 w-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
+      <button
+      id="menu-btn"
+      class="rounded-lg p-2 hover:bg-gray-100 md:hidden"
+      onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+    >
+      <svg class="h-6 w-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
 
       </div>
 
