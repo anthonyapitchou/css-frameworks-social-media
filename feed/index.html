@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>FrameWork Social Media</title>
+    <title>FrameWork Social Media - Feed</title>
   </head>
 
   <body class="bg-gray-100">
@@ -13,20 +13,20 @@
     <nav class="w-full border-b border-gray-200 bg-white shadow-sm">
       <div class="flex items-center justify-between px-6 py-4">
 
-        <!-- Logo -->
         <h1 class="text-xl font-bold text-blue-500">SocialApp</h1>
 
-        <!-- Search desktop -->
         <input
           type="search"
           placeholder="Search posts..."
           class="hidden w-96 rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none md:block"
         />
 
-        <!-- Links desktop -->
-        <ul class="hidden items-center gap-6 md:flex">
+        <ul
+          class="hidden items-center gap-6 md:flex"
+          style="display:none"
+        >
           <li>
-            <a href="../feed/index.html" class="font-bold text-blue-500">Feed</a>
+            <a href="index.html" class="font-bold text-blue-500">Feed</a>
           </li>
           <li>
             <a href="../profile/index.html" class="text-gray-600 hover:text-blue-500">Profile</a>
@@ -36,11 +36,10 @@
           </li>
         </ul>
 
-        <!-- Burger mobile -->
         <button
           id="menu-btn"
           class="rounded-lg p-2 hover:bg-gray-100 md:hidden"
-          onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+          onclick="document.getElementById('mobile-menu').classList.toggle('hidden'); document.getElementById('mobile-menu').style.display = document.getElementById('mobile-menu').style.display === 'none' ? 'block' : 'none';"
         >
           <svg class="h-6 w-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -50,7 +49,11 @@
       </div>
 
       <!-- Menu mobile -->
-      <div id="mobile-menu" class="hidden border-t border-gray-200 bg-white px-6 py-4 md:hidden">
+      <div
+        id="mobile-menu"
+        class="hidden border-t border-gray-200 bg-white px-6 py-4 md:hidden"
+        style="display:none"
+      >
         <input
           type="search"
           placeholder="Search posts..."
@@ -58,7 +61,7 @@
         />
         <ul class="flex flex-col gap-4">
           <li>
-            <a href="../feed/index.html" class="font-bold text-blue-500">Feed</a>
+            <a href="index.html" class="font-bold text-blue-500">Feed</a>
           </li>
           <li>
             <a href="../profile/index.html" class="text-gray-600 hover:text-blue-500">Profile</a>
@@ -70,9 +73,10 @@
       </div>
     </nav>
 
-    <!-- Feed container -->
-    <main class="mx-auto max-w-6xl px-15 py-10">
+    <!-- Main content -->
+    <main class="mx-auto max-w-6xl px-4 py-10">
 
+      <!-- Hero section -->
       <section
         class="mb-8 flex h-64 items-center rounded-xl bg-cover bg-center p-8 text-white shadow-md"
         style="background-image: url('../img/priscilla.jpg');"
@@ -104,6 +108,7 @@
 
       <!-- Posts feed -->
       <ol class="relative border-s border-gray-200">
+
         <li class="mb-10 ms-6">
           <span class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full ring-8 ring-white">
             <img class="rounded-full shadow-lg" src="../img/profile-picture.jpg" alt="Bonnie image"/>
@@ -164,8 +169,8 @@
             </div>
           </div>
         </li>
-      </ol>
 
+      </ol>
     </main>
 
   </body>
